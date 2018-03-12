@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Net Neutrality</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://widget.battleforthenet.com/widget.js" async></script>
+    <style>
+      #bottom {
+       position: absolute;
+        float: bottom;
+        width: 100%;
+      }
+      #indent {
+        margin-left: 10px;
+      }
+      #content {
+        margin-left: 20px;
+      }
+      #down {
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body onload="setInterval(increase, 200)">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo" id="indent"> Net Neutrality</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="definitions.html"> What is Net Neutrality?</a></li>
+          <li><a href="afffects.html">What are the affects?</a></li>
+          <li><a href="solution.html">Our Solution</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="carousel carousel-slider" id="down">
+      <a class="carousel-item" href="#one!"><img src="cover.jpg"></a>
+      <a class="carousel-item" href="#two!"><img src="slider2.png"></a>
+      <a class="carousel-item" href="#three!"><img src="slider3.jpg"></a>
+      <a class="carousel-item" href="#four!"><img src="traffic.jpg"></a>
+    </div>
+    <div id="content">
+      <h1>What will happen without Net Neutrality?</h1>
+      <p class="flow-text">Well you may see more of these:</p>
+      <center>
+        <div class="progress">
+          <div class="determinate" style="width: 0%" id="jsGrab"></div>
+        </div>
+        <div class="progress">
+          <div class="indeterminate"></div>
+        </div>
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+            </div>
+            </div>
+        </center>
+        <p class="flow-text">Now that Net Neutrality is gone Internet Service Providers (ISPs) can slow you down or block you from certain things because you don't pay for that package. They also can create lanes of speed for each website, so that you have to pay more to load your YouTube video or Netflix show. This is why we need to fight for Net Neutrality.</p>
+        <br>
+        <h1>A Quick History of Net Neutrality!</h1>
+      </div>
+      <iframe src='http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0AgG4fGMfRNdHdDNqak5kV01FTlVZMGFfSDc4SmlvMmc&font=Bevan-PotanoSans&maptype=toner&lang=en&height=650' width='100%' height='650' frameborder='0'></iframe>
+      <p class="flow-text" id="content">As you can see from the slider above it's court case that ended up coining it was in September of 2002, but the pot didn't really stir up until, 2005. It was pretty active until 2009 when it took pretty much a complete stop. In 2010 it became active and then in 2011 it became slow again. Then on Febuary 26, 2015, Net Neutrality becomes official and everone it very happy about it, except ISPs. Sadly, on May, 18, 2017, we lost Neutrality in an FCC vote to begin rolling back Net Neutrality. Forunately, Senator Markey is in the process of making a bill that would overturn Net Neutrality's roll back by the FCC.</p>
+    <footer class="page-footer" id="bottom">
+      <div class="footer-copyright">
+        <div class="container">
+            © 2018 Tyler Wright
+        </div>
+      </div>
+    </footer>
+    <script>
+    $('.carousel.carousel-slider').carousel({fullWidth: true});
+    function increase() {
+      bar = document.getElementById('jsGrab');
+      boi = bar.style.width;
+      end = boi.search('%');
+      boi = boi.slice(0, end);
+      boi = parseInt(boi);
+      if (boi < 100) {
+        boi += 1;
+        newVal = boi.toString() + '%';
+        bar.style.width = newVal;
+      }else {
+        newVal = '0%';
+        bar.style.width = newVal;
+      }
+    }
+    </script>
+  </body>
+</html>
